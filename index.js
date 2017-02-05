@@ -1,7 +1,7 @@
 
 var express = require('express');
 var app = express();
-var lockoutRouter = require('./apis/lockout.js');
+var weatherRouter = require('./apis/getweather.js');
 var cors = require('cors');
 
 app.use(cors());
@@ -9,7 +9,7 @@ app.get('/', function(req,res){
   res.send('Hello World!');
 })
 
-app.use('/apis/', lockoutRouter);
+app.use('/apis/', weatherRouter);
 
 app.use(express.static('build'));
 

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/lockout/:key', function(req, res, next){
-  console.log(req.params.key);
+  //console.log(req.params.key);
   var result = [{
     key: req.params.key,
     times: 2,
@@ -14,7 +14,7 @@ router.get('/lockout/:key', function(req, res, next){
     unlocktime: new Date().toLocaleTimeString()
   }];
 
-  console.dir(result);
+  //console.dir(result);
   res.json({
     data: result
   });

@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+//import App from './App';
 import './index.css';
+import Weather from './Weather';
 
 ReactDOM.render(
-  <App />,
+  <Weather />,
   document.getElementById('root')
 );
