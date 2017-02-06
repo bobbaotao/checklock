@@ -1,6 +1,6 @@
 MOCHA = ./node_modules/mocha/bin/_mocha
 ISTANBUL = ./node_modules/.bin/istanbul
-MOCHA_OPTS = -b --timeout 20000 --reporter spec
+MOCHA_OPTS = --timeout 20000 --reporter spec
 TESTS_ALL = test/test.*.js
 MOCHAWESOME_OPTS = --timeout 20000 --reporter mochawesome
 

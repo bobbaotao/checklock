@@ -3,7 +3,7 @@
 const request = require('supertest');
 const should = require('should');
 
-const app =  require('././app.js');
+const app =  require('../app.js');
 
 describe('test weather api: ', function(){
     it('get shanghai weather', function(done) {
@@ -11,8 +11,9 @@ describe('test weather api: ', function(){
       .expect(200)
       .end((err, res) => {
         should.not.exist(err);
-        res.data.success.should.equal(true);
-        should.exist(res.data.data.text);
+	//console.dir(res);
+        res.body.success.should.equal(true);
+        should.exist(res.body.data.text);
         done();
       })
     });
@@ -21,8 +22,9 @@ describe('test weather api: ', function(){
       request(app).get('/apis/getweather/ysxyesij12803dwe')
       .expect(200)
       .end((err, res) => {
-        should.exist(err);
-        should.exist(res.data.data);
+        should.not.exist(err);
+	res.body.success.should.equal(false);
+        should.exist(res.body.data);
         done();
       })
     });
