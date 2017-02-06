@@ -13,3 +13,5 @@ test-awesome-report:
 test-cov:
 	@echo "Testing..."
 	@$(ISTANBUL) cover -- $(MOCHA) $(MOCHAWESOME_OPTS) $(TESTS_ALL)
+
+.PHONY: test test-awesome-report test-cov
