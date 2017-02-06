@@ -8,7 +8,7 @@ var crypto = require('crypto');
 var querystring = require('querystring');
 var request = require('request-promise');
 
-var URL = 'https://api.thinkpage.cn/v3/';
+var URL = process.env.WeatherAPIUrl || 'https://api.thinkpage.cn/v3/';
 
 function Api(uid, secretKey) {
   this.uid = uid;

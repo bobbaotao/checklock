@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 var WeatherAPI = require('../util/tpweatherapi');
 
-const UID = 'U50A8E2DAE';
-const Key = 'q6kojsknkhdwjsno';
+const UID = process.env.WeatherAPIUID ||  'U50A8E2DAE';
+const Key = process.env.WeatherAPIKey || 'q6kojsknkhdwjsno';
 
 router.get('/getweather/:key', function(req, res, next) {
   var api = new WeatherAPI(UID, Key);
