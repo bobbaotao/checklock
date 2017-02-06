@@ -9,7 +9,7 @@ test:
 	@$(MOCHA) $(MOCHA_OPTS) $(TESTS_ALL)
 test-awesome-report:
 	@echo "Testing..."
-  @$(MOCHA) $(MOCHAWESOME_OPTS) $(TESTS_ALL)
+	@$(MOCHA) $(MOCHAWESOME_OPTS) $(TESTS_ALL)
 test-cov:
 	@echo "Testing..."
 	@$(ISTANBUL) cover -- $(MOCHA) $(MOCHAWESOME_OPTS) $(TESTS_ALL)
